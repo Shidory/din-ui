@@ -1,0 +1,117 @@
+.dui-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-flex;
+  line-height: 1;
+}
+.default {
+  color: #4D4D4D;
+  background-color: #fff;
+}
+.default:hover {
+  background-color: rgba(0,0,0,0.12);
+}
+.default:active {
+  background-color: rgba(0,0,0,0.18);
+}
+
+.default-primary {
+  color: #464DE4;
+}
+
+.default-news {
+  color: #464DE4;
+}
+
+.default-info {
+  color: #02AADB;
+}
+
+.default-success {
+  color: #40b574;
+}
+
+.default-warning {
+  color: #FF9901;
+}
+
+.default-error {
+  color: #ce364c;
+}
+
+.default-disabled {
+  opacity: 0.7;
+}
+
+.default-disabled:hover {
+  color: #A5A5A5;
+  opacity: 0.7;
+  background-color: #fff;
+  cursor: default;
+}
+
+.primary {
+  color: #fff;
+  background-color: #1ea7fd;
+}
+.primary:hover {
+  background-color: #52b7f8;
+}
+.primary:active {
+  background-color: #429bd4;
+}
+.outlined {
+  color: #4D4D4D;
+  border: 1px solid #4D4D4D;
+  background: linear-gradient(to left, #fff 50%, rgba(0,0,0,0.12) 50%) right;
+  background-size: 300%;
+  transition: .3s ease-out;
+}
+.outlined:hover {
+  box-shadow: 0 4px 7px 0 rgba(74,74,74,0.5);
+  background-position: left;
+}
+.outlined:active {
+  background-color: rgba(0,0,0,0.18);
+}
+.raised {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.storybook-button--error {
+  color: white;
+  background-color: #ce364c;
+}
+.storybook-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
