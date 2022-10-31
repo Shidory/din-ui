@@ -37,18 +37,18 @@ export default {
     props = reactive(props);
     return {
       buttonColor: computed(() => {
-        let color = 'default';
-        if (props.variant === 'default' && props.color === 'primary') color = `${props.variant}-${props.color}`;
-        if (props.variant === 'default' && props.color === 'news') color = `${props.variant}-${props.color}`;
-        if (props.variant === 'default' && props.color === 'info') color = `${props.variant}-${props.color}`;
-        if (props.variant === 'default' && props.color === 'success') color = `${props.variant}-${props.color}`;
-        if (props.variant === 'default' && props.color === 'warning') color = `${props.variant}-${props.color}`;
-        if (props.variant === 'default' && props.color === 'error') color = `${props.variant}-${props.color}`;
-        if (props.variant === 'default' && props.disabled) color = 'default-disabled';
+        let color = '';
+        if (props.color) color = `default-${props.color}`;
+        if (props.variant) color = `${props.variant}-default`;
+        if (props.disabled) color = `default-disabled}`;
+        if (props.variant && props.color) color = `${props.variant}-${props.color}`;
+        if (!props.variant && !props.color && !props.disabled) color = 'default-default';
+        if ((props.variant && props.disabled) || (props.variant && props.color && props.disabled)) color = `${props.variant}-disabled`;
+        if ((!props.variant && props.disabled) || (!props.variant && !props.color && props.disabled)) color = 'default-disabled';
         return color;
       }),
 
-      buttonVariant: computed(() => props.variant ? `dui-button ${props.variant}` : 'dui-button'),
+      buttonVariant: computed(() => props.variant ? 'dui-button' : 'dui-button'),
 
       onClick() {
         emit('click');

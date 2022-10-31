@@ -12,14 +12,17 @@ export default {
     color: {
       control: { type: 'select' },
       options: ['default', 'primary', 'news', 'info', 'success', 'warning', 'error'],
+      defaultValue: 'default',
     },
     variant: {
       control: { type: 'select' },
       options: ['default', 'raised', 'outlined', 'text', 'squared'],
+      defaultValue: 'default',
     },
     disabled: {
       control: { type: 'radio' },
       options: [true, false],
+      defaultValue: false,
     },
   },
 };
@@ -38,9 +41,35 @@ const Template = (args) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-  color: 'success',
   variant: 'default',
   size: 'medium',
-  disabled: true,
+  label: 'Default',
+};
+
+export const Raised = Template.bind({});
+Raised.args = {
+  variant: 'raised',
+  size: 'medium',
+  label: 'Default',
+};
+
+export const Outlined = Template.bind({});
+Outlined.args = {
+  variant: 'outlined',
+  size: 'medium',
+  label: 'Default',
+};
+
+export const Text = Template.bind({});
+Text.args = {
+  variant: 'text',
+  size: 'medium',
+  label: 'Default',
+};
+
+export const Squared = Template.bind({});
+Squared.args = {
+  variant: 'squared',
+  size: 'medium',
   label: 'Default',
 };
