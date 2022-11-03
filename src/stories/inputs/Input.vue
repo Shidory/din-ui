@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import './input.css';
+  import './input.scss';
 
   export default {
     name: 'DuiInput',
